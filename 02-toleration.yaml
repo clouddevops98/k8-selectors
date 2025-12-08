@@ -28,4 +28,4 @@ spec:
       tolerations:
       - key: "project"
         operator: "Equal"
-        effect: "Schedule"
+        effect: "NoSchedule"
