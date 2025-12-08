@@ -17,6 +17,7 @@ spec:
   template:
     metadata:
       labels:
+        # purpose: dp-demo
         purpose: tolerations-demo
         project: roboshop
     spec:
@@ -28,4 +29,5 @@ spec:
       tolerations:
       - key: "project"
         operator: "Equal"
+        value: "roboshop"
         effect: "NoSchedule"
