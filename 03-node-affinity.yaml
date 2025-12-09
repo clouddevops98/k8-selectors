@@ -3,15 +3,16 @@ kind: Pod
 metadata:
   name: nginx
 spec:
-  nodeAffinity:
-    requiredDuringSchedulingIgnoredDuringExecution:
-      nodeSelectorTerms:
-      - matchExpressions:
-          - key: disktype
-            operator: In
-            values:
-            - us-east-1b            
-  containers:
-  - name: nginx
-    image: nginx
-    imagePullPolicy: IfNotPresent
+   affinity:
+     nodeAffinity:
+       requiredDuringSchedulingIgnoredDuringExecution:
+         nodeSelectorTerms:
+         - matchExpressions:
+           - key: disktype
+             operator: In
+             values:
+             - us-east-1b            
+   containers:
+   - name: nginx
+     image: nginx
+     imagePullPolicy: Always
