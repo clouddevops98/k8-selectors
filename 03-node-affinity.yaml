@@ -19,7 +19,7 @@ spec:
           #    - ssd
             # soft rule
        preferredDuringSchedulingIgnoredDuringExecution:
-       - weight: 1
+       - weight: 100
          preference:
            matchExpressions:
            - key: project
