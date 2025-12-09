@@ -32,8 +32,7 @@ spec:
            - key: project
              operator: In
              values:
-             - amazon
-                         
+             - amazon                
    containers:
    - name: nginx
      image: nginx
