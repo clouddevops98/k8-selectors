@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: anti-affinity
 spec:
    affinity:
      nodeAffinity:
@@ -10,7 +10,7 @@ spec:
          nodeSelectorTerms:
          - matchExpressions:
            - key: topology.kubernetes.io/zone
-             operator: In
+             operator: NotIn
              values:
              - us-east-1f              
    containers:
